@@ -1,29 +1,20 @@
 # Collaborative Design Workflow
 
-**Default mode for a new game or this starter pack: DISCUSS, NOT BUILD.**
+**Default state: DISCUSS, NOT BUILD.** Global work constraints live in `docs/GODOT_CLAUDE_GUIDELINES.md`.
 
-## Phase 0 — Review the reusable starter pack (this repository)
+## Responsibilities and approval
 
-- Read `CLAUDE.md`, the global guidelines, asset convention and test expectations.
-- Identify **contradictions, blind spots, risky assumptions and unnecessary bureaucracy**. Prefer fewer, clearer rules rather than more files or tooling.
-- Present concise suggestions with the problem, minimal correction and trade-off. Clearly label recommendations as **not approved**.
-- Do not edit anything, implement game code, configure tools, or add new tasks unless the user approves a specific change.
-- Changes to global standards are reviewed with the user and versioned deliberately.
+- **User:** Owns creative vision and is the **only approval authority** for features, tasks, changes to standards, exceptions and merges.
+- **ChatGPT:** Helps brainstorm, document decisions and propose scoped tasks. Its plans are **not authorization**.
+- **Claude Code:** Checks the actual repository, challenges feasibility and suggests minimal designs; implements only explicitly approved work. Its plans are **not authorization**.
+- **`docs/PROJECT_BRIEF.md`:** Single shared handoff record for confirmed decisions, proposed ideas and current approved objective. No second task template or parallel source of truth.
 
-## Phase 1 — Design a new game (in a repo made from the pack)
+## Steps
 
-1. User describes the concept and desired first milestone.
-2. Claude collaborates: ask only essential questions; identify risks and propose simple technical options and module boundaries. Challenge assumptions constructively.
-3. Record confirmed choices in `docs/PROJECT_BRIEF.md`. Keep proposed features out of approved scope until accepted.
-4. User approves the first concrete development objective and definition of done. Only then move to implementation.
+1. **Review / design.** User describes concept or asks for pack review; assistants propose approaches and trade-offs without implementing.
+2. **Confirm.** Record *only user-confirmed* decisions in the brief and label pending ideas as proposals.
+3. **Authorize.** User explicitly approves the next objective and acceptance criteria in their message in the current conversation. The brief records that approval; it never grants one.
+4. **Implement.** Claude checks repository state, changes only the approved scope, tests affected modules/interfaces and reports any out-of-scope discoveries without acting on them.
+5. **Review.** User decides whether the result is accepted or needs an approved correction; no self-generated follow-on tasks.
 
-## Phase 2 — Implement one approved objective at a time
-
-- Maximum **three approved objectives** per iteration; prefer **one**.
-- Required subtasks and direct regressions are in scope. Unrelated discoveries go to `docs/BACKLOG.md` without automatic action.
-- If scope/complexity expands significantly, stop, explain options and ask.
-- Run and report module and integration tests; finish when acceptance criteria are met.
-
-## Collaboration principle
-
-**Claude may question the plan and suggest alternatives, but may not treat its suggestions as permission to build them.** Neither this pack nor a planning discussion authorizes implementation.
+For a new game, begin with the smallest valuable objective. For this master pack, review documentation changes before promotion to `main`.

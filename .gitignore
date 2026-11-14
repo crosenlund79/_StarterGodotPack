@@ -1,0 +1,21 @@
+# Godot editor caches and imported metadata
+.godot/
+.import/
+
+# Local editor / OS noise
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Generated exports, installers and local output (only produced on request)
+/build/
+/dist/
+/exports/
+*.exe
+*.msi
+*.pck
+*.apk
+*.aab
+*.dmg
+*.app/

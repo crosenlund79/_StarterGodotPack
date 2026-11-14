@@ -1,38 +1,37 @@
-# Godot / Claude Project Starter Pack — v1.1 (Pilot)
+# Godot / Claude Starter Pack — v1.2
 
-A **reusable set of engineering rules**, not a Godot game or a ready-made framework. This repository is where we test and improve the starter pack collaboratively with Claude before reusing it in new game repositories.
+Reusable **development instructions and design conventions** for future Godot 4 projects; this is **not a game, a functioning asset loader, or an implemented test framework**. We improve this pack with the user, ChatGPT and Claude before promoting a reviewed version to `main`.
 
-## What is in the pack?
+## Contents
 
-| Path | Purpose |
+| File | Responsibility |
 | --- | --- |
-| `CLAUDE.md` | Automatically loaded project instructions and preflight |
-| `docs/GODOT_CLAUDE_GUIDELINES.md` | Approved global development standards (16 rules + task budget) |
-| `docs/DESIGN_WORKFLOW.md` | Design-first collaboration, review and approval gates |
-| `docs/PROJECT_BRIEF.md` | Copy-specific game decisions, empty until a game is approved |
-| `docs/TASK_TEMPLATE.md` | Optional compact task definition |
-| `docs/BACKLOG.md` | Deferred findings; **not** implementation authorization |
-| `assets/README.md` | User-overridable Claude graphics/audio convention |
-| `tests/README.md` | Module and cross-module test expectations |
-| `.gitignore` | Standard local Godot, Claude and build ignores |
+| `CLAUDE.md` | Claude's entry point, preflight and work modes |
+| `docs/GODOT_CLAUDE_GUIDELINES.md` | Single authority for engineering, source control, scope and delivery rules |
+| `docs/DESIGN_WORKFLOW.md` | User / ChatGPT / Claude decision and handoff process |
+| `docs/PROJECT_BRIEF.md` | Single record for each game's design and approved current objective |
+| `docs/BACKLOG.md` | Deferred observations, never implicit authorization |
+| `assets/README.md` | Runtime art/audio override contract (`template_` fallbacks) |
+| `custom/` | User-owned override folder (`graphics/`, `audio/`); `.gdignore` keeps Godot from importing/packing it |
+| `tests/README.md` | Module, integration, manual and environment test expectations |
+| `.gitignore` | Editor-generated, local and binary artifacts ignored by default |
 
-## Test the pack in its own repository
+## Pilot this master pack
 
-1. Create a **new empty GitHub repository** for the starter pack (no generated README or `.gitignore`).
-2. Extract the ZIP and upload/commit its **contents, preserving folders**. Do **not** upload only the ZIP.
-3. Open Claude Code in the repository root. Run `/context all` and check that `CLAUDE.md` and its imported rules are present in memory.
-4. Send the first review prompt below. **Claude must only review and propose**, not change files.
-5. Discuss changes; approve only specific edits; commit a reviewed version (e.g. `v1.1` / `v1.2`).
-6. Once stable, optionally enable **Settings → Template repository** in GitHub. For new projects use **Use this template → Create a new repository**, taking the default branch only.
+1. Review the rules and check for gaps or needless complexity with Claude Code in **review-only mode**.
+2. Approve changes explicitly. Keep review edits on a working branch, then inspect and merge to `main` only after approval.
+3. When stable, optionally mark `_StarterGodotPack` as a **GitHub template repository**.
+4. For a new project, choose **Use this template**, then complete `docs/PROJECT_BRIEF.md` and hold a design review **before any game code**.
 
-### First message to Claude (copy/paste)
+### Starter review prompt
 
-> This repository is our reusable Godot/Claude starter pack, **not a game**. Read `CLAUDE.md` and all referenced guidance. Review the pack for contradictions, missing practical safeguards, unnecessary complexity, and points that might cause scope creep. Check in particular: modularity, module/integration testing, three-branch policy, explicit-only EXE/installer builds, user-replaceable graphics/audio, and collaborative design approval. **Review only: do not edit files, create branches, scaffold a Godot project or implement anything.** Return a concise prioritized list of findings, with minimal proposed changes and trade-offs. Wait for approval.
+> This is the `_StarterGodotPack` reusable template, not a game. Read `CLAUDE.md` and all referenced guidance. Review for contradictory rules, real Godot 4 pitfalls, unnecessary complexity and scope creep. Propose minimal improvements with trade-offs. Do not edit files, create branches, generate game code or export a build without my explicit approval.
 
-## Reuse for an actual game
+## Reuse in a game repository
 
-Create a new repository from the template (or extract the ZIP into an empty repository), then fill `docs/PROJECT_BRIEF.md` with the agreed premise, scope, and first objective. Claude Code should design collaboratively before building anything. An undecided field is not permission to invent a decision.
+- **Replace this README with the game's README.** Preserve `CLAUDE.md`, the rules and relevant conventions; fill out `docs/PROJECT_BRIEF.md` only with user-confirmed decisions.
+- `src/<module>/`, automated tests and the minimal asset resolver are introduced when an approved game objective needs them—not prebuilt speculatively in this template.
+- The runtime override behavior (Windows/Linux, effective after restarting the game) is required in games that use replaceable assets. This documentation **does not itself implement that loader**; the first relevant implementation must test it.
+- Template updates do **not** automatically flow into existing games. Review changes case by case.
 
-**Important limitations:** `CLAUDE.md` is a set of instructions, **not technical enforcement**. The override folders are a **contract**, not a working asset loader; implement/test resolution when the first real assets are created. Tests are similarly implemented with actual modules, not included as speculative scaffolding. Do not introduce automatic builds, hooks or packages without approval.
-
-**Version control:** New versions of the master pack do not automatically update existing games; review and apply changes deliberately. This pack does not create or rotate Git branches.
+**Operating principle:** Build what's needed. Test it. Preserve what works. Report what was discovered. Then stop.
