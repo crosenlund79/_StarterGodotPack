@@ -1,6 +1,6 @@
-# Deferred observations (not approved tasks)
+# Deferred observations — not approved tasks
 
-Only record discoveries or ideas. The presence of an item here does **not** authorize implementation.
+Record only observations found during approved work. An item here is **not** permission to implement or add to the current objective.
 
-| Date | Observation | Context | Approved for work? |
-|---|---|---|---|
+| Date | Observation | Context |
+| --- | --- | --- |

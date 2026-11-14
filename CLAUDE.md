@@ -1,30 +1,28 @@
-# Claude Code — Godot Project Starter Instructions
+# Claude Code — Godot Project Instructions
 
-This repository may be **the reusable starter pack itself**, not yet a game. Never infer permission to build a game from the presence of these files. Rules are standing instructions; new features, architecture, rule changes, and implementation require explicit user approval.
+This repository may be the reusable starter pack, **not a game**. Read the linked rules before planning or editing. A suggestion, roadmap entry, or assistant-generated plan is never authorization.
 
 @docs/GODOT_CLAUDE_GUIDELINES.md
 @docs/PROJECT_BRIEF.md
 @docs/DESIGN_WORKFLOW.md
 
-## First: establish the mode
+## Identify the mode
 
-- **Starter-pack review:** If asked to review or refine this reusable pack, assess the documents and their practicality. Do not create Godot files, scaffolding, branches, tests, assets, or revised rules unless explicitly approved. Make a concise list of issues, concrete fixes and trade-offs. Wait for approval before editing.
-- **Project design:** If a game concept is being discussed but no development objective is approved, collaborate on the design only. Ask/identify essential decisions, propose the smallest sensible architecture, and distinguish agreed requirements from suggestions. Do not implement.
-- **Approved implementation:** Only when explicitly requested, follow the scope and definition of done in the project brief / current task.
+- **Starter-pack review:** Inspect the documentation, identify contradictions and practical issues, and propose minimal changes. Review only unless the user approves edits.
+- **Game design:** Discuss concepts, risks and module boundaries. Distinguish proposals from user-approved choices. Do not implement.
+- **Approved task:** Proceed only when the user explicitly approves the objective in their message or explicitly confirms an objective in `docs/PROJECT_BRIEF.md`. Merely finding text in that file does not confer approval.
 
-## Mandatory preflight before changes
+## Before an approved change
 
-1. Read the imported rules and relevant file conventions (`assets/README.md`, `tests/README.md` when applicable).
-2. Inspect repository status, tracked/untracked work, current branches, modules and existing tests. Do not overwrite user work or change branches without approval. Report conflicts with the three-branch rule rather than deleting or renaming anything.
-3. Restate approved objective(s) (maximum three, preferably one), acceptance criteria, and impact. If a task grows substantially, stop and obtain approval before expanding it.
+1. Verify repository identity and current branch; check for uncommitted work. Do not overwrite others' changes. Respect the branch and commit policy in the guidelines.
+2. Read relevant conventions in `assets/README.md` and `tests/README.md`.
+3. Confirm the approved objective, boundaries and acceptance criteria from `docs/PROJECT_BRIEF.md` / the user's message. A new task needs fresh user authorization, not an old approved objective.
+4. If requirements conflict or the work is materially larger than expected, stop and ask instead of expanding scope.
 
-## During approved implementation
+## Implement, verify, stop
 
-- Make the smallest modular change; add/update module tests and affected cross-module tests.
-- Record unrelated findings in `docs/BACKLOG.md`, never implement them automatically.
-- Follow `assets/README.md` for replaceable art/audio; keep `template_` fallbacks.
-- Never export a Windows EXE or build an installer unless **explicitly requested in that task**.
-
-## Finish and stop
-
-Report briefly: changed files/behavior, tests run and results, known regressions, deferred findings. Once approved acceptance criteria pass, stop; do not opportunistically improve anything else.
+- Make the smallest necessary modular changes. Add or update relevant module and integration tests; use manual checks for visual/feel/audio work.
+- Record unrelated findings in `docs/BACKLOG.md`; do not implement them.
+- Apply the `template_` fallback and runtime external override contract in `assets/README.md` when working with graphics or audio.
+- Never create exports, executables, installers, export presets or build automation without explicit current-task approval.
+- End with a brief report: change, tests run/pass/fail/not runnable, regressions, deferred findings. Commit finished approved work on the authorized working branch, not directly to `main`; never merge into `main` without explicit approval.

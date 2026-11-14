@@ -1,19 +1,31 @@
-# Project Brief (fill only when creating a game from this pack)
+# Project Brief — Single design and task handoff record
+
+This is the **master template**, not an active game. Complete it collaboratively when creating a game. An entry is not permission to start development unless the user explicitly approved it. Only the user can approve scope.
+
+## Game decisions (user-confirmed only)
 
 - **Game title:** Undecided
-- **Godot version:** Undecided
+- **Godot version (pin minor, e.g. 4.x):** Undecided
 - **Premise / core player loop:** Undecided
 - **Perspective / art direction:** Undecided
-- **Confirmed mechanics and constraints:** None yet
-- **Explicitly out of scope:** None defined yet
-- **Approved architecture / module boundaries:** Not decided
-- **Existing repository/code:** Starter pack only; no game implementation
-- **Test runner and commands:** Not decided (choose when creating the first module)
+- **Confirmed mechanics and constraints:** None
+- **Explicitly out of scope:** Undecided
+- **Existing modules / boundaries:** None; no game code in starter pack
+- **Testing framework (GUT or GdUnit4) and commands:** Undecided until first implemented module
+- **Asset override notes:** Runtime external folder overrides required; see `assets/README.md`
 
 ## Current approved development objective
 
-**None.** The starter pack, brainstorming, and technical suggestions do not authorize game implementation.
+**Status: None.** This heading records an objective *after* the user approves it; it is not a standing instruction to implement on its own.
 
-## Design proposals awaiting approval
+- **User approval (reference / summary):** None
+- **Objective (one by default):** None
+- **In scope:** None
+- **Out of scope:** None
+- **Acceptance criteria / done when:** None
+- **Relevant module tests:** None
+- **Relevant integration/manual checks:** None
 
-None. Record only proposals discussed for this project; never treat them as approved scope.
+## Proposals awaiting user approval
+
+None. Keep proposals clearly separate from confirmed decisions and active work. Do not promote them to tasks automatically.
