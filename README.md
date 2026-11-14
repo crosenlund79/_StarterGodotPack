@@ -1,6 +1,4 @@
-# Godot / Claude Starter Pack — v1.2 (Review Candidate)
-
-> Label stays "Review Candidate" until the user approves promotion to `main`; then change it to "v1.2" here and in `docs/GODOT_CLAUDE_GUIDELINES.md`.
+# Godot / Claude Starter Pack — v1.2
 
 Reusable **development instructions and design conventions** for future Godot 4 projects; this is **not a game, a functioning asset loader, or an implemented test framework**. We improve this pack with the user, ChatGPT and Claude before promoting a reviewed version to `main`.
 
