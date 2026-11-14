@@ -1,6 +1,6 @@
 # Global Godot / Claude Development Guidelines
 
-**Version:** 1.2 (review candidate — change to "1.2" only when the user approves promotion to `main`) · **Applies to:** Godot projects developed with Claude.
+**Version:** 1.2 · **Applies to:** Godot projects developed with Claude.
 
 Standing engineering rules; gameplay design remains project-specific. The user alone approves objectives, exceptions and changes to these standards. This version consolidates the original 16 rules without relaxing their intent. Keep this file the **single authoritative source** for these rules; other documents link to it instead of copying them.
 
