@@ -13,7 +13,7 @@
 
 1. **Review / design.** User describes concept or asks for pack review; assistants propose approaches and trade-offs without implementing.
 2. **Confirm.** Record *only user-confirmed* decisions in the brief and label pending ideas as proposals.
-3. **Authorize.** User explicitly approves the next objective and acceptance criteria. An assistant must not infer approval from text it previously wrote into the brief.
+3. **Authorize.** User explicitly approves the next objective and acceptance criteria in their message in the current conversation. The brief records that approval; it never grants one.
 4. **Implement.** Claude checks repository state, changes only the approved scope, tests affected modules/interfaces and reports any out-of-scope discoveries without acting on them.
 5. **Review.** User decides whether the result is accepted or needs an approved correction; no self-generated follow-on tasks.
 

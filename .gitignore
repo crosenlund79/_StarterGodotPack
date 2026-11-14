@@ -19,6 +19,3 @@ Thumbs.db
 *.aab
 *.dmg
 *.app/
-
-# Export presets must never be created speculatively; review when explicitly needed
-export_presets.cfg

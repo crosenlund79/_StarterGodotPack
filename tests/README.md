@@ -7,6 +7,4 @@ Testing starts with the **first implemented module**, not with speculative start
 - An **important interaction** is a contract between two or more modules that affects gameplay/state. Add automated integration tests for those contracts, updating them when either side changes.
 - Visual, animation, audio and control **feel** also require a short, relevant **manual checklist**, since headless tests cannot establish quality of presentation.
 - Document exact commands to run logic tests headlessly, and keep tests practical. Do not claim tests passed if Godot, the runner or dependencies are unavailable; state **not run and why**.
-- Asset resolver tests must cover external/project/fallback priority and invalid/missing files (see `assets/README.md`). An actual exported-game check is necessary to confirm runtime overrides, but **never initiate an export** without explicit approval; report verification pending if not approved.
-
-No automated executable/installer building or unrequested CI/export infrastructure.
+- Asset resolver tests must cover override precedence, missing/invalid fallback, supported formats and override-root selection, using an injected temporary folder (see `assets/README.md`). Exported-game verification follows guideline 4; if no export was approved, report it as pending.

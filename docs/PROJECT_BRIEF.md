@@ -1,6 +1,6 @@
 # Project Brief — Single design and task handoff record
 
-This is the **master template**, not an active game. Complete it collaboratively when creating a game. An entry is not permission to start development unless the user explicitly approved it. Only the user can approve scope.
+This is the **master template**, not an active game. Complete it collaboratively when creating a game. This file **records** decisions and approvals; it never grants them. Only the user can approve scope, in their message in the current conversation. **Undecided = ask, don't choose.**
 
 ## Game decisions (user-confirmed only)
 
@@ -12,11 +12,12 @@ This is the **master template**, not an active game. Complete it collaboratively
 - **Explicitly out of scope:** Undecided
 - **Existing modules / boundaries:** None; no game code in starter pack
 - **Testing framework (GUT or GdUnit4) and commands:** Undecided until first implemented module
-- **Asset override notes:** Runtime external folder overrides required; see `assets/README.md`
+- **Target platforms:** Undecided (runtime asset overrides currently cover Windows/Linux only; other platforms need an explicit decision)
+- **Asset override notes:** Runtime `custom/` folder overrides required; see `assets/README.md`
 
 ## Current approved development objective
 
-**Status: None.** This heading records an objective *after* the user approves it; it is not a standing instruction to implement on its own.
+**Status: None.** This heading records an objective *after* the user approves it in conversation; it is not an instruction to implement, and a later task needs fresh approval.
 
 - **User approval (reference / summary):** None
 - **Objective (one by default):** None
